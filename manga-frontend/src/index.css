@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Geist", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-brand: "Cormorant Garamond", serif;
+  --font-handwriting: "Caveat", "Viner Hand ITC", "Brush Script MT", cursive;
+
+  --color-primary: #F5F2ED;
+  --color-primary-foreground: #121212;
+  --color-on-primary: #121212;
+  --color-accent: #F5F2ED;
+  --color-accent-foreground: #121212;
+}
+
+/* Material symbols variation classes */
+.material-symbols-outlined {
+  /* CHÈN THÊM DÒNG NÀY ĐỂ TRÌNH DUYỆT ĐỌC ĐÚNG FONT ICON */
+  font-family: 'Material Symbols Outlined' !important;
+
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbars for master-crafted editorial studio look */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D2A27;
+  border-radius: 9999px;
+  border: 1px solid #1c1c1c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E3B38;
+}
+
+/* Additional UI styling for high-contrast editorial presentation */
+.sankyuu-glow {
+  box-shadow: 0 0 120px 50px rgba(245, 242, 237, 0.04);
+  background: radial-gradient(circle, rgba(245, 242, 237, 0.04) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.glow-glow {
+  box-shadow: 0 0 80px 10px rgba(245, 242, 237, 0.08);
+}

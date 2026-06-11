@@ -1,0 +1,170 @@
+import { Pitch, Notice, AssistantTask, ProjectFile, TeamMember } from "./types";
+
+export const INITIAL_PITCHES: Pitch[] = [
+  {
+    id: "neon-genesis",
+    title: "Neon Genesis Resonance",
+    mangaka: "Kato Akira",
+    tantou: "M. Sato",
+    genre: "Sci-Fi / Action",
+    description: "In a post-collapse metropolis, memory fragments are traded as currency. The protagonist discovers a fragmented file that threatens the foundations of the ruling syndicate. A 3-chapter pilot demonstrating strong world-building and dynamic panelling.",
+    coverUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBbvYjEAML1Z83FXZzhkorAhglrbKEEiQOAr4V54CYCel7DnsOY13SSYrBZ2vSWpicfCNLz018f4UNgE72VMQsYc-ZcA4OuQb64R4H_G0AkxJgn8pKC3eZsPCE-osFfaF53cQ0mRE_wECrtgnH-xQkIbw7mVIlqu-A3KPj_tSzFpo2k4M9UmSQdnndHe6bQHGoCGBX8lB_t7GPygK5Sp3-Wo7q3YtJvlZWcDqk8laZsoWZFB0q-rxZ8cNOFlzwwP07yARbIPABaiB8",
+    phase: "Pilot Board Consensus",
+    pagesTotal: 40,
+    pagesCompleted: 0,
+    boardConsensus: 2, // 2 out of 4 dots
+    status: "pending",
+  },
+  {
+    id: "cyberpunk-samurai",
+    title: "Cyberpunk Samurai",
+    mangaka: "Kato Akira",
+    tantou: "M. Sato",
+    genre: "Action / Mecha",
+    description: "Vanguard samurai in neon Tokyo battling mechanized overlords using ancient steel and experimental memory implants. Volume 4 release compilation under active design.",
+    coverUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCXBY7HZHkp3IXfr7YSqgVmMh-AaxtFhZ0YsKw5qYGQoDYctyt8eN_qfksOdrBqoGl1RdCbi2YgcOYNXE1bGzCktbcsthmYO-IXN_qAW-AGOHGaY-5VhZMPjBstS5LirUE5EFGsCpZeSoQ2T-ex259gdsFWu2A9TsKFn8wDNa2t8c4ZJxTZopVuGr5cegyTl_5BF8SnfUR3G9qmwCyyB0BKOwLu4eXuwgX7aMQfiiNHGthKTvmW0sDrzWqIeEc8MNgSIaH0HDD18Hk",
+    phase: "Volume 4",
+    pagesTotal: 180,
+    pagesCompleted: 150,
+    boardConsensus: 4,
+    status: "inking",
+  },
+  {
+    id: "silent-echoes",
+    title: "Silent Echoes",
+    mangaka: "Tanaka",
+    tantou: "M. Sato",
+    genre: "Mystery / Supernatural",
+    description: "Volume 3 cover and chapter drafting. A young detective who hears memory frequencies traces unsolved cases in historical Kyoto.",
+    coverUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuB1O0bXDXaItFx1Tnd02eRxRWxdjsyzuO2vbstSgRn08g89jw1JBvRSWTziuUQLh8l11sdHu37QQtPg3G4M1xI8L67x_HlAGrDRry4Q6WFmF_WtAcJbYDwHAtPmD1-BXUbYidLYHvNkVbLlyayX-JNHruV4tRcuPtpoC0i9xTvgDkJLv11yAqGIUmucWA-A6sNZ3HoBeCkBZ8wv-Zeo-LLClbu7eeEzjq3BxOak-OqdviDi7tVNUAzP2hu5WTqp_xPrRkVSf45ZwkQ",
+    phase: "Sketch Phase",
+    pagesTotal: 32,
+    pagesCompleted: 12,
+    boardConsensus: 3,
+    status: "drafting",
+  },
+  {
+    id: "urban-mythos",
+    title: "Urban Mythos",
+    mangaka: "Yuki",
+    tantou: "M. Sato",
+    genre: "Fantasy / Drama",
+    description: "Undercover mythical guardians living in standard modern apartment structures. High details on environment setting and screentones.",
+    coverUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCXBY7HZHkp3IXfr7YSqgVmMh-AaxtFhZ0YsKw5qYGQoDYctyt8eN_qfksOdrBqoGl1RdCbi2YgcOYNXE1bGzCktbcsthmYO-IXN_qAW-AGOHGaY-5VhZMPjBstS5LirUE5EFGsCpZeSoQ2T-ex259gdsFWu2A9TsKFn8wDNa2t8c4ZJxTZopVuGr5cegyTl_5BF8SnfUR3G9qmwCyyB0BKOwLu4eXuwgX7aMQfiiNHGthKTvmW0sDrzWqIeEc8MNgSIaH0HDD18Hk",
+    phase: "Toning Phase",
+    pagesTotal: 24,
+    pagesCompleted: 2,
+    boardConsensus: 3,
+    status: "drafting",
+  },
+];
+
+export const INITIAL_NOTICES: Notice[] = [
+  {
+    id: "notice-1",
+    type: "Priority Revision",
+    time: "2h ago",
+    content: '"Shadow Blade" Chapter 4 draft submitted. Needs immediate review on pacing before inking phase.',
+    read: false,
+    sender: "M. Sato (Tantou)",
+  },
+  {
+    id: "notice-2",
+    type: "Update",
+    time: "5h ago",
+    content: '"Slice of Life" creator requested 1-week hiatus due to health. Rescheduling volume release.',
+    read: false,
+    sender: "System",
+  },
+  {
+    id: "notice-3",
+    type: "Urgent",
+    time: "10 mins ago",
+    content: "Urgent (Mangaka): Re-draw requested on Page 4 bottom panel. Perspective is slightly off.",
+    read: false,
+    sender: "Sensei",
+  },
+  {
+    id: "notice-4",
+    type: "Editor Note",
+    time: "2 hours ago",
+    content: "Editor Note: Chapter 111 approved for final print. Great work team.",
+    read: true,
+    sender: "M. Sato (Tantou)",
+  },
+  {
+    id: "notice-5",
+    type: "Editor Note",
+    time: "New",
+    content: "Revise Page 8: The pacing here feels slightly rushed. Can we add one more panel to emphasize the reaction?",
+    read: false,
+    sender: "M. Sato (Tantou)",
+  },
+];
+
+export const INITIAL_TASKS: AssistantTask[] = [
+  {
+    id: "task-1",
+    priority: "High Priority",
+    chapter: "Vol 14. Ch 112",
+    title: "Background: Sci-Fi Cityscape Pgs 4-5",
+    description: "Detailed inkwork required for the central hub establishing shot. Focus on perspective grid provided by Mangaka.",
+    dueText: "Due Today",
+    completedPercent: 30,
+    filesCount: 3,
+    artworkUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBbvYjEAML1Z83FXZzhkorAhglrbKEEiQOAr4V54CYCel7DnsOY13SSYrBZ2vSWpicfCNLz018f4UNgE72VMQsYc-ZcA4OuQb64R4H_G0AkxJgn8pKC3eZsPCE-osFfaF53cQ0mRE_wECrtgnH-xQkIbw7mVIlqu-A3KPj_tSzFpo2k4M9UmSQdnndHe6bQHGoCGBX8lB_t7GPygK5Sp3-Wo7q3YtJvlZWcDqk8laZsoWZFB0q-rxZ8cNOFlzwwP07yARbIPABaiB8",
+    mangakaAvatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuD8-oYSFJgw-WZw5vavj0N2FuzWMZZScnr98Jm890atWN9_MZPxZK2veypbG_tlvSu_p29bhpkKoDorzTh_nXklcVz8j8C-mDkkEplMZAdxo9ZY-2Myjvtfi8wdN0kGmBpQ8DeSsgpC22-dS5uGffrpltdqfLjAhe09XrtHUUIETscslf4HhTbDtNpKg8IW21kmoz6m-BlOg3n1zSxjnnClKaMg8DX_k_y7DSHR3uT7NedZfw0S9BvlIjKoXijPnsb464stWsFn62A",
+  },
+  {
+    id: "task-2",
+    priority: "Inking",
+    chapter: "Vol 14. Ch 112",
+    title: "Speedlines: Action Sequence Pgs 10-12",
+    description: "Apply dynamic speedlines to character clashes. Refer to style guide asset #4.",
+    dueText: "Due in 2 days",
+    completedPercent: 60,
+    filesCount: 1,
+  },
+];
+
+export const INITIAL_FILES: ProjectFile[] = [
+  {
+    id: "file-1",
+    name: "Ref_Bg_01.png",
+    type: "image",
+    size: "4.2 MB",
+  },
+  {
+    id: "file-2",
+    name: "Custom_Brushes.zip",
+    type: "archive",
+    size: "18.5 MB",
+  },
+  {
+    id: "file-3",
+    name: "Ch112_Script.pdf",
+    type: "pdf",
+    size: "1.1 MB",
+  },
+];
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: "team-1",
+    name: "Kenji M.",
+    role: "Working on Backgrounds",
+    status: "online",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuD8-oYSFJgw-WZw5vavj0N2FuzWMZZScnr98Jm890atWN9_MZPxZK2veypbG_tlvSu_p29bhpkKoDorzTh_nXklcVz8j8C-mDkkEplMZAdxo9ZY-2Myjvtfi8wdN0kGmBpQ8DeSsgpC22-dS5uGffrpltdqfLjAhe09XrtHUUIETscslf4HhTbDtNpKg8IW21kmoz6m-BlOg3n1zSxjnnClKaMg8DX_k_y7DSHR3uT7NedZfw0S9BvlIjKoXijPnsb464stWsFn62A",
+    initials: "KM",
+    statusColor: "bg-emerald-500",
+  },
+  {
+    id: "team-2",
+    name: "Sarah T.",
+    role: "Tones (Idle)",
+    status: "idle",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPfvf0aEahT3_MJJimuQcORbKJN2smV24BD3X5hCIDgUJZ84QTVS0nIrYNQotW9ywNpf2DGEh3PC-g6S0dbp0XP4uTdU2OMr6bkVKjnoiuluNaS0o3o-nth_ngaSjCww3QNBaBAGAQYiCHsWhNRfiAc968hfhfO4LBGYJk8xtV9r3Mg9pE9fW5mG_7_Hon8v97LKkO76fsIW_rcqq3hSue4zFy2NMZb4k00VHb7J1IEI1ZFrjg9GPM5pud62b0KHo1-OQliyxrFRo",
+    initials: "ST",
+    statusColor: "bg-amber-500",
+  },
+];
